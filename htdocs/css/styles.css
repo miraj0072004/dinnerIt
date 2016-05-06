@@ -1,0 +1,106 @@
+.bgimage {
+    background-image: url('../images/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
+
+.check {
+    opacity: 0.5;
+    color: #996;
+}
+
+#outlets {
+    margin-top: 25px;
+}
+
+aside {
+    margin-top: 25px;
+    /*    padding-top: 25px;*/
+    border: 1px solid black;
+}
+
+.inline {
+    display: inline;
+}
+
+h4.inline {
+    float: left;
+}
+
+input.inline {
+    float: right;
+}
+
+#login_area {
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#logged_in img {
+    float: left;
+    margin-right: 25px;
+}
+
+#logged_in #welcome {
+    float: left;
+}
+
+#logout {
+    padding: 0 20px;
+}
+
+#thanks {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#thanks img {
+    padding: 20px;
+    display: block;
+}
+
+
+/*
+#choice_outlet {
+    padding: 20px;    
+    width: 50%;
+    margin:  0 auto;
+}*/
+
+#choice_outlet {
+    text-align: center;
+    margin: 25px 25px 75px 25px;
+}
+
+#continue {
+    text-align: center;
+}
+
+.choice_outlets {
+    margin: 10px;
+    padding: 2px;
+}
+
+.choice-users img {
+    height: 50px;
+    width: 50px;
+    margin: auto 3px;
+    
+}
+
+/*the below two styles make are to vertically center the user images w.r.t the outlet images*/
+#choice-container
+{
+position: relative;
+    
+}
+
+#choice-container div
+{
+
+  top: 50%;
+  transform: translateY(-50%);
+}
