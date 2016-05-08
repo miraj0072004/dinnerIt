@@ -3,18 +3,12 @@ require('includes/config.inc.php');
 include('includes/header.html');
 
 require MYSQL;
-?>
-
-
-    <h2>We're Done  <?php echo $_COOKIE['user_name'] ?>!! This is your team's total order so far</h2>
-
-    <?php
     
-    mysqli_autocommit($dbc, FALSE);
+mysqli_autocommit($dbc, FALSE);
             
 if (!empty($_SESSION['cart'])) {            
 $total=0;           
-            
+echo " <h2>We're Done ".$_COOKIE['user_name']." !! This is your team's total order so far</h2>";            
 foreach ($_SESSION['cart'] as $item_id => $item)
 {
     //echo $value["name"]."<br>";
@@ -108,9 +102,16 @@ $r1 =mysqli_query ($dbc,$q1);
 
             </div>
         </div>
+        <div id="finishDiv">
+            <a href="thanks.php" role="button" class="btn btn-success btn-lg" id="finish">Finish</a>
+        </div>
 
-        <a href="thanks.php" role="button" class="btn btn-success" id="finish">Finish</a> 
-        
-       <?php
-} 
+        <?php
+}
+        else
+        {
+        $location = BASE_URL . 'index.php';
+		header("Location: $location");
+		exit();  
+        }
         ?>

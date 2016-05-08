@@ -97,7 +97,7 @@ require MYSQL;
 
                     <div class="col-sm-10 ">
                         <h4 id="total_price" class="inline">Total : <span id="sum">0</span></h4>
-                        <input type="submit" class="btn btn-default inline" value="submit">
+                        <input type="submit" class="btn btn-default inline" value="submit" id="submitChoice">
                     </div>
                 </div>
             </form>

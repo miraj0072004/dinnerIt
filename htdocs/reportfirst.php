@@ -82,7 +82,7 @@ $r=mysqli_query($dbc,$q);
                         $_SESSION['cart'][$row['item_id']] = array ('name' => $row['item_name'], 'price' => $row['item_price'], 'quantity' => $_POST[$row['item_id']]);
                     }
                      echo "<tr>
-                                <td colspan=2>Your personal total is </td>
+                                <td colspan=3>Your personal total is </td>
                                 <td><b>$total</b></td>
                           </tr>";   
                     ?>
@@ -92,7 +92,9 @@ $r=mysqli_query($dbc,$q);
             </div>
         </div>
 
-        <a href="reportlast.php" role="button" class="btn btn-success" id="checkout">Checkout</a>
+        <div id="checkoutDiv">
+        <a href="reportlast.php" role="button" class="btn btn-success btn-lg" id="checkout">Checkout</a>
+        </div>
         <?php
 
 $q1= "select d.item_name,a.price,a.quantity,b.outlet_name from order_contents a,outlets b,orders c,food_items d 
@@ -126,9 +128,7 @@ $r1 =mysqli_query ($dbc,$q1);
                     { 
                         echo"
                           <tr>
-                            <td>".$row['outlet_name']."</td>                            <td>".$row['outlet_name']."</td>
-
-
+                            <td>".$row['outlet_name']."</td>
                             <td>".$row['item_name']."</td>
                             <td>".$row['quantity']."</td>
                             <td>".$row['quantity']*$row['price']."</td>

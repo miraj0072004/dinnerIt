@@ -60,6 +60,7 @@ $(document).ready(function (e) {
 
         }
 
+        canSubmitEnable();
     });
 
     function checkLimit(sum) {
@@ -313,6 +314,7 @@ $(document).ready(function (e) {
         updateChoice();
     }
 
+    //when the drop down to choose outlets changes values
     $("#selectOutlet").change(function () {
         //isContinue();
         if ($("#selectOutlet").val() == 0) {
@@ -329,5 +331,20 @@ $(document).ready(function (e) {
         }
 
     }
+
+    //contine button checking when the page is loaded
     isContinue();
+
 });
+
+function canSubmitEnable() {
+    if ($('#pricing div[id^="selected"]').length) {
+        //$("#submitChoice").removeClass("disabled");
+        $("#submitChoice").prop('disabled', false);
+    } else {
+        //$("#submitChoice").addClass("disabled");
+        $("#submitChoice").prop('disabled', true);
+    }
+}
+
+canSubmitEnable();

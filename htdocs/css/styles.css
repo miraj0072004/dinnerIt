@@ -104,3 +104,9 @@ position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
+
+#checkoutDiv,#finishDiv
+{
+    text-align: center;
+    margin:20px;    
+}
